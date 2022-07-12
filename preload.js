@@ -3,20 +3,15 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
 // Set up context bridge between the renderer process and the main process
-contextBridge.exposeInMainWorld(
-  'shell',
-  {
-    open: () => ipcRenderer.send('shell:open'),
-  }
-)
-
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector)
-    if (element) element.innerText = text
-  }
-
-  for (const dependency of ['chrome', 'node', 'electron']) {
-    replaceText(`${dependency}-version`, process.versions[dependency])
-  }
-})
+contextBridge.exposeInMainWorld('electronAPI', {
+  onUser: (callback) => ipcRenderer.on('send-user', callback),
+  onRepos: (callback) => ipcRenderer.on('sendRepos', callback),
+  ipcRenderer: {
+    fetchAuth() {
+      return ipcRenderer.send('fetch-auth');
+    },
+    fetchRepos() {
+      return ipcRenderer.send('fetch-repos');
+    }
+  },
+});
