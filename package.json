@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:renderer": "webpack --config ./src/renderer/webpack.renderer.config.js",
-    "dev:main": "webpack --config ./src/main/webpack.config.js",
+    "dev:main": "webpack --config ./src/main/webpack.main.config.js",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
@@ -31,6 +31,7 @@
     "@electron-forge/maker-zip": "^6.0.0-beta.64",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
+    "dotenv-webpack": "^8.0.0",
     "electron": "^19.0.7",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",

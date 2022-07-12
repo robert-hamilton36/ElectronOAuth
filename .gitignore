@@ -5,3 +5,5 @@ out/
 old/
 src/main
 renderer.js
+.env
+main.js
