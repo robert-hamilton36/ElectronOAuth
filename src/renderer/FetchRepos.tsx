@@ -3,7 +3,6 @@ import React from 'react'
 export const FetchRepos = () => {
 
   const handleClick = async () => {
-    console.log('handle')
     await window.electronAPI.ipcRenderer.fetchRepos();
   }
 

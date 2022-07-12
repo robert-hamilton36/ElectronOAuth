@@ -9,29 +9,32 @@ interface User {
   bio: string;
 }
 
+interface Repos {
+  id: number;
+  name: string;
+  private: boolean;
+}
+
 export function App() {
   const [auth, setAuth] = useState<User | null>(null)
-  const [repos, setRepos] = useState<string[] | null>(null)
+  const [repos, setRepos] = useState<Repos[] | null>(null)
 
   useEffect(() => {
     window.electronAPI.onUser((_event: String, value: User) => {
-      console.log(value)
       setAuth(value)
     })
   }, [])
 
   useEffect(() => {
-    window.electronAPI.onRepos((_event: String, value: string[]) => {
-      console.log(value)
+    window.electronAPI.onRepos((_event: String, value: Repos[]) => {
       setRepos(value)
     })
   }, [])
 
-  console.log(auth)
   return(
     <div className='container'>
       <Nav auth={auth}/>
-      <div className='mainContainer'>
+      <div className='content'>
         { auth && !repos && <FetchRepos />}
         { repos && <Repos repos={repos} />}
       </div>

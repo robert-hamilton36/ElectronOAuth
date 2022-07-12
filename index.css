@@ -1,6 +1,17 @@
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   margin: 0;
   padding: 0;
+}
+
+.nav {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #161b22;
+  padding: 30px;
+  color: #c9d1d9;
 }
 
 .avatar {
@@ -14,18 +25,6 @@ body {
 
 .bio {
   flex-grow: 4;
-}
-
-.nav {
-  position: sticky;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: #161b22;
-  padding: 30px;
-  color: #c9d1d9;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-
 }
 
 .button {
@@ -42,9 +41,23 @@ body {
   color: #DFDEDF;
 }
 
-.mainContainer {
+.content {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+}
+
+.list {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.private {
+  color: red;
 }
