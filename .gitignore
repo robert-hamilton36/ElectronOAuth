@@ -4,3 +4,4 @@ dev/renderer.js
 out/
 old/
 src/main
+renderer.js
