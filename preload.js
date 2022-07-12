@@ -5,7 +5,7 @@ const { contextBridge, ipcRenderer } = require('electron')
 // Set up context bridge between the renderer process and the main process
 contextBridge.exposeInMainWorld('electronAPI', {
   onUser: (callback) => ipcRenderer.on('send-user', callback),
-  onRepos: (callback) => ipcRenderer.on('sendRepos', callback),
+  onRepos: (callback) => ipcRenderer.on('send-repos', callback),
   ipcRenderer: {
     fetchAuth() {
       return ipcRenderer.send('fetch-auth');

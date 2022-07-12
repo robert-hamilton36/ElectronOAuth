@@ -3,7 +3,6 @@ release
 dev/renderer.js
 out/
 old/
-src/main
 renderer.js
 .env
 main.js
