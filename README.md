@@ -23,4 +23,5 @@ Redirects to electron app through url protocol handler
 7. Create distributable <br>
   `npm run make`
 8. Distributable is outputted into /out/make
-9. Open app with terminal: `xdg-open electron-auth://`
+9. Install distributable
+10. Open app with terminal: `xdg-open electron-auth://`
