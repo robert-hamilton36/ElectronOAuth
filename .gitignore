@@ -1,0 +1,8 @@
+node_modules
+release
+dev/renderer.js
+out/
+old/
+renderer.js
+.env
+main.js
