@@ -13,7 +13,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "",
+  "author": "Robert Hamilton",
   "license": "ISC",
   "babel": {
     "presets": [
