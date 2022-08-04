@@ -13,8 +13,10 @@ Redirects to electron app through url protocol handler
 No dev mode
 
 # Get Started
-  1. Install prepackaged installation (windows/debian)
+  1. Install prepackaged installation (windows(.exe)/debian(.deb))
     Using my preconfig Oauth App
+    <br>
+    [Releases](https://github.com/robert-hamilton36/ElectronOAuth/releases)
   2. package and make your own installables
     Using your own preconfig Oauth github app
 
